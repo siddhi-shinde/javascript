@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical operator</title>
+</head>
+<body>
+    <p id="eligible"></p>
+
+    <script>
+        let math=prompt("Enter Maths Marks")
+        let sci=prompt("Enter Science Marks")
+
+        if(math>=90 && sci>=85){
+            document.getElementById("eligible").innerHTML="Scholarship Eligibility:"+(true)
+        }else{
+            document.getElementById("eligible").innerHTML="Scholarship Eligibility:"+(false)
+        }
+    </script>
+</body>
+</html>

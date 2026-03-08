@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Addition:<span id="add"></span></p>
+    <p>Substraction:<span id="sub"></span></p>
+    <p>Multiplication:<span id="multi"></span></p>
+    <p>Division:<span id="div"></span></p>
+    <p>Modulus:<span id="mod"></span></p>
+   
+   <script>
+     n1=prompt("Enter first number")
+     n2=prompt("Enter second number")
+    document.getElementById("add").innerHTML=Number(n1)+Number(n2)
+    document.getElementById("sub").innerHTML=Number(n1)-Number(n2)
+    document.getElementById("multi").innerHTML=Number(n1)*Number(n2)
+    document.getElementById("div").innerHTML=Number(n1)/Number(n2)
+    document.getElementById("mod").innerHTML=Number(n1)/Number(n2)
+   </script>
+</body>
+</html> 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+   <p id="perimeter"></p>
+   <p id="area"></p> 
+   <p id="comp"></p>
+
+   <script>
+    let length=Number(prompt("Enter length of Rectangle"));
+    let width=Number(prompt("Enter width of Rectangle"));
+    let perimeter=2*(length+width);
+    let area=length*width;
+    
+    document.getElementById("perimeter").innerHTML="Perimeter :"+perimeter;
+    document.getElementById("area").innerHTML="Area : "+area;
+    document.getElementById("comp").innerHTML="Is perimeter greater than area :"+(perimeter>area);
+   </script>
+</body>
+</html>

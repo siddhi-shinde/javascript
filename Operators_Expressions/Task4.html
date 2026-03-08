@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Assignment operator</title>
+</head>
+<body>
+    <p id="initial"></p>
+    <p id="add"></p>
+    <p id="sub"></p>
+    <p id="multi"></p>
+    <p id="div"></p>
+    <p id="mod"></p>
+    <script>
+        let x=10;
+        document.getElementById("initial").innerHTML=("Initial value of x : "+x)
+        x+=5;
+        document.getElementById("add").innerHTML=("Adding 5 in x : "+x)
+         x*=3;
+        document.getElementById("multi").innerHTML=("After Adding 3 : "+x)
+         x-=10;
+        document.getElementById("sub").innerHTML=("After Substracting by 10 : "+x)
+         x/=2;
+        document.getElementById("div").innerHTML=("After dividing by 2 : "+x)
+         x%=3;
+        document.getElementById("mod").innerHTML=("Modulus with 3 : "+x)
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="BMI"></p>
+    <p id="category"></p>
+
+    <script>
+        let height=parseFloat(prompt("Enter height"));
+        let weight=parseFloat(prompt("Enter weight"));
+        let bmi=(weight)/(height*height)
+
+        document.getElementById("BMI").innerHTML="BMI :"+bmi;
+        if(BMI<18.5){
+            document.getElementById("category").innerHTML="Category :Underweight"
+        }else if(BMI>=18.5 && BMI<24.9){
+              document.getElementById("category").innerHTML="Category :Normal Weight"
+        }else if(BMI >=25 && BMI<29.9){
+              document.getElementById("category").innerHTML="Category :Overweight"
+        }else{
+              document.getElementById("category").innerHTML="Category :Obesity"
+        }
+
+    </script>
+</body>
+</html>

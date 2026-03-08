@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="exp1"></p>
+    <p id="exp2"></p>
+    <p id="exp3"></p>
+    <p id="exp4"></p>
+    <script>
+        let exp1=10+3*5;
+        let exp2=(10+3)*5;
+        let exp3=20/2+3;
+        let exp4=20/(2+3);
+
+        document.getElementById("exp1").innerHTML="10+3*5="+Number(10+3*5);
+        document.getElementById("exp2").innerHTML="(10+3)*5="+Number(10+3*5);
+        document.getElementById("exp3").innerHTML="20/2+3="+Number(10+3*5);
+        document.getElementById("exp4").innerHTML="20/(2+3)="+Number(10+3*5);
+    </script>
+</body>
+</html>
