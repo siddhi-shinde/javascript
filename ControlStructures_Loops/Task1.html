@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Checker</title>
+</head>
+<body>
+   <p id="num"></p> 
+
+   <script>
+    let num=prompt("Enter the Number");
+    if(num<0){
+        document.getElementById("num").innerHTML=num+" "+"is Negative Number"
+    }else if(num>0){
+        document.getElementById("num").innerHTML=num+" "+"is Positive Number"
+    }else{
+        document.getElementById("num").innerHTML="Given number is Zero"
+    }
+   </script>
+</body>
+</html>
