@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function generatePyramid(rows){
+            for(let i=1;i<=rows;i++){
+                let line=" ";
+                for(let space=1;space<=rows-i;space++){
+                    line+=" ";
+                }
+                for(let num=1;num<=i;num++){
+                        line+=num;
+                    }
+                    for(let num=i-1;num>=1;num--){
+                        line+=num;
+                    }
+                    document.write(line);
+            }
+        }generatePyramid(5);
+    </script>
+</body>
+</html>

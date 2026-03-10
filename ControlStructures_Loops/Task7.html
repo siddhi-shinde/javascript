@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prime Number</title>
+<title>Prime Number</title>
 </head>
 <body>
-    <script>
-        let num=Number(prompt("Enter the Number"))
-        if(num%1==0 && num%num==0){
-            document.write("Given number is Prime Number")
-        }else{
-            document.write("Given number is not Prime Number") 
-        }
-    </script>
+
+<script>
+let num = Number(prompt("Enter a number"));
+let i;
+
+for(i = 2; i < num; i++){
+    if(num % i == 0){
+        document.write("Not Prime Number");
+        break;
+    }
+}
+if(i == num && num > 1){
+    document.write("Prime Number");
+}
+</script>
+
 </body>
 </html>

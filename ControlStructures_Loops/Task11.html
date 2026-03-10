@@ -1,21 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Count Vowels And Consonents</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
     <script>
-        let str=prompt("Enter a string")
-        vowels="aeiouAEIOU"
-        count = 0
-for(i=0; i< str.length; i++){
-    if(vowels.includes(str.charAt(i))){
-        count++
-        document.write("Number of Vowels in string is:"+count)
-    }
-}
+      let str = prompt("Enter a string:");
+
+      let vowels = "aeiouAEIOU";
+      let vowelCount = 0;
+      let consonantCount = 0;
+
+      for (let i = 0; i < str.length; i++) {
+        let ch = str.charAt(i);
+
+        if (vowels.includes(ch)) {
+          vowelCount++;
+        } else if ((ch >= "a" && ch <= "z") || (ch >= "A" && ch <= "Z")) {
+          consonantCount++;
+        }
+      }
+
+      document.write("String: " + str + "<br>");
+      document.write("Number of Vowels: " + vowelCount + "<br>");
+      document.write("Number of Consonants: " + consonantCount);
     </script>
-</body>
+  </body>
 </html>

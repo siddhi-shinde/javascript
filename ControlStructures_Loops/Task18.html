@@ -7,13 +7,18 @@
 </head>
 <body>
     <script>
-       
+      let first=0
+      let second=1
+      let third
     let n=Number(prompt("How many Terms"))
-    for(let i=0;i<=n;i++){
- first=0;
-        second=1
-        third=first+second
-    }
+    document.write("Fibonacci Series:"+first+" "+second+" ")
+    for(let i=3;i<=n;i++){
+        third=first+second  
+        document.write(" "+third)
+        first=second
+        second=third 
+       
+    } 
     </script>
 </body>
 </html>
