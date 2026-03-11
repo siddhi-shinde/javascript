@@ -1,4 +1,4 @@
-function printSquare(n){
+function printTriangle(n){
 for(let i=1;i<=n;i++){
     line=''
     for(let j=1;j<=i;j++){
@@ -7,4 +7,4 @@ for(let i=1;i<=n;i++){
    console.log(line)
 }
 }
-printSquare(5)
+printTriangle(5)
