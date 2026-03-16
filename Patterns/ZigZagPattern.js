@@ -1,5 +1,3 @@
-
-
 function printZigZag(n){
 
     for(let i = 1; i <= 3; i++){
@@ -13,13 +11,10 @@ function printZigZag(n){
             else{
                 line += " ";
             }
-
         }
 
         console.log(line);
     }
-
 }
-
 printZigZag(9);
 

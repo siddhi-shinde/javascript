@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphanumeric characters</title>
+</head>
+<body>
+   <script>
+    let str=prompt("Enter a string")
+    let result=""
+    for(let i=0;i<str.length;i++){
+        let ch=str[i]
+        if((ch>='a' && ch<='z') || (ch>='A' && ch<='Z')||(ch>='0' && ch<='9') ){
+            result+=ch
+        }
+    }
+    document.write(result)
+   </script> 
+</body>
+</html>
