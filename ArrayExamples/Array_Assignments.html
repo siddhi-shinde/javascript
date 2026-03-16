@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Array Assignments</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+   <div class="container w-75 rounded m-5 p-3 text-center" style="background-color: rgb(203, 195, 195); height:300px;">
+    <h2>Assignent 1 To Do List Manager</h2>
+    <div class="container">
+      <input type="text" id="inputAss1" />
+      <button class="btn btn-primary" onclick="addToDos()">Add Task</button>
+      <button class="btn btn-primary" onclick="clearAllToDos()">Clear All</button>
+    </div>
+    <div class="container" id="resultToDo"></div>
+    </div>
+    <div class="container">
+    </div>
+  
+    <script>
+      toDos = []
+
+      function renderToDos(){
+         document.querySelector('#resultToDo').innerHTML=toDos.map((task,index)=>`
+                                                      <div class='mb-1'>
+                                                        <b class=text-secondary pe-5'>${task}</b>
+                                                        <button class='btn btn-danger' onclick='deleteTask(${index})'>DELETE</button>
+                                                      </div>
+        `).join('')
+      }
+
+      function addToDos(){
+        inputEle=document.querySelector('#inputAss1')
+        newToDo=inputEle.value
+        toDos.push(newToDo)
+        // console.log(toDos)
+        renderToDos()
+        console.log(inputEle.value)
+        inputEle.value=''
+        console.log(inputEle.value)
+      }
+
+      function clearAllToDos(){
+        console.log(toDos)
+        toDos=[]
+        renderToDos()
+        console.log(toDos)
+      }
+
+      function deleteTask(i){
+        console.log(i)
+        toDos.splice(i,1)
+        renderToDos()
+      }
+    </script>
+
+
+<!-- Assignment 2 -->
+<section>
+<div class="container w-75 rounded m-5 p-3 text-center" style="background-color: rgb(203, 195, 195); height:300px;">
+    <h2>Assignent-2 Marks Calculator</h2>
+    <div class="container">
+      <input type="text" id="inputAssMarks" />
+      <button class="btn btn-primary" onclick="addMarks()">Add Marks</button>
+      <button class="btn btn-primary" onclick="Calculate()">Calculate</button>
+            <button class="btn btn-primary" onclick="Reset()">Reset</button>
+    </div>
+    <div class="container" id="resultMarks"></div>
+    </div>
+</section>
+
+<script>
+  
+  marksArray=[]
+  function addMarks(){
+    inputAssMarks=document.querySelector('#inputAssMarks')
+    inputMark=inputAssMarks.value
+    inputNum=parseInt(inputMark)
+    marksArray.push(inputNum)
+    inputAssMarks.value=""
+    console.log(marksArray)
+  }
+
+   function Calculate(){
+    total=0
+    HighestMarks=0
+    LowestMarks=Infinity
+    for(let i=0;i<marksArray.length;i++){
+      total+=marksArray[i]  
+  
+      if(marksArray[i]>HighestMarks){
+        HighestMarks=marksArray[i]
+      }
+      if(marksArray[i]<LowestMarks){
+        LowestMarks=marksArray[i]
+      }
+    }
+    let average=total/marksArray.length
+     document.querySelector('#resultMarks').innerHTML=`
+                                          <p><b>Total:</b>${total}</p>
+                                          <p><b>Average:</b>${average}</p>
+                                          <p><b>Highest Marks:</b>${HighestMarks}</p>
+                                          <p><b>Lowest Marks:</b>${LowestMarks}</p>`
+   }
+  
+</script>
+
+<!-- Assignment 3 -->
+<section>
+  <div class="container w-75 rounded m-5 p-3 text-center" style="background-color: rgb(203, 195, 195); height:300px;">
+    <h2>Assignent-3 Search in an Array</h2>
+    <div class="container">
+      <p>Guess the ingredient of Panner Tikka Masala</p>
+      <input type="text" id="inputFood" />
+      <button class="btn btn-primary" onclick="Search()">Search</button>
+    </div>
+    <div class="container" id="resultFood"></div>
+    </div>
+</section>
+
+<script>
+  FoodArray=['Paneer','capsicum','onion','tomato','coriander leaves','curd','ginger-garlic paste','oil/butter','salt','Red chilli powder']
+  function Search(){
+  inputFoodEle=document.querySelector('#inputFood')
+  ingredient=inputFoodEle.value
+  for(i=0;i<FoodArray.length;i++){
+    if(FoodArray[i].toLowerCase()==ingredient.toLowerCase()){
+      document.querySelector('#resultFood').innerHTML=FoodArray[i]
+      break;
+    }else{
+      document.querySelector('#resultFood').innerHTML='Not Found'
+    }
+  }
+} 
+//  function Search(){
+//  ingFromArray=FoodArray.find((ing)=>ing.toLowerCase()==ingredient.toLowerCase())
+//   if(ingFromArray){
+//       document.querySelector('#resultFood').innerHTML=ingFromArray.value
+//      }else{
+//       document.querySelector('#resultFood').innerHTML='Not Found'
+//     }
+//  } 
+ </script>
+
+
+<!--  Assignment 4 -->
+<section>
+<div class="container w-75 rounded m-5 p-3 text-center" style="background-color: rgb(203, 195, 195); height:300px;">
+    <h2>Assignent-4 Find Even and Odd Numbers</h2>
+    <div class="container">
+      <input type="text" id="inputNumber" />
+      <button class="btn btn-primary" onclick="addNumber()">Add Number</button>
+      <button class="btn btn-primary" onclick="showEven()">Show Even</button>
+      <button class="btn btn-primary" onclick="showOdd()">Show Odd</button>
+      <button class="btn btn-primary" onclick="Clear()">Clear</button>
+    </div>
+    <div class="container" id="EvenNum"></div>
+    <div class="container" id="OddNum"></div>
+    </div>
+</section>
+
+<script>
+  NumArray=[]
+  function addNumber(){
+  inputNumber=document.querySelector('#inputNumber')
+    inputNum=inputNumber.value
+    inputN=parseInt(inputNum)
+    NumArray.push(inputN)
+    inputNumber.value=""
+    console.log(NumArray)
+  }
+
+  function showEven(){
+    resultEven=NumArray.filter(number=>(number%2==0))
+    document.querySelector('#EvenNum').innerHTML="Even Numbers:"+resultEven
+  }
+   function showOdd(){
+    resultOdd=NumArray.filter(number=>(number%2!=0))
+    document.querySelector('#OddNum').innerHTML="Odd Numbers:"+resultOdd
+  } 
+
+  function Clear(){
+    document.querySelector('#EvenNum').innerHTML=""
+    document.querySelector('#OddNum').innerHTML=""
+  }
+</script>
+
+
+<!-- Assignment 5 -->
+<section>
+<div class="container w-75 rounded m-5 p-3 text-center" style="background-color: rgb(203, 195, 195); height:300px;">
+    <h2>Assignent-5 Sort Names Alphabetically</h2>
+    <div class="container">
+      <input type="text" id="inputName" />
+      <button class="btn btn-primary" onclick="addName()">Add Name</button>
+      <button class="btn btn-primary" onclick="Sort()">Sort</button>
+      <button class="btn btn-primary" onclick="Reset()">Reset</button>
+      
+    </div>
+    <div class="container" id="SortResult"></div>
+    </div>
+</section>
+<script>
+   ArrayName=[]
+  function addName(){
+  inputName=document.querySelector('#inputName')
+  Name=inputName.value
+  ArrayName.push(Name)
+  inputName.value=""
+  console.log(ArrayName) 
+  }
+
+   function Sort(){
+        let sortedNames = ArrayName.sort(function(a,b){
+            return a.toLowerCase().localeCompare(b.toLowerCase());
+        })
+        document.querySelector('#SortResult').innerHTML = sortedNames;
+    }
+
+
+  function Reset(){
+    document.querySelector('#SortResult').innerHTML=""
+  }
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
